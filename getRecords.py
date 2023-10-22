@@ -34,7 +34,7 @@ def getRecord(id):
         url = 'https://cloudpbx.beeline.ru/apis/portal/records?id={id}&dateFrom={yearback}-{monthback}-{dayback}T00%3A00%3A59.000Z&dateTo={yearback}-{monthback}-{dayback}T23%3A59%3A59.000Z'.format(
             id=id, yearback=yearback, monthback=monthback, dayback=dayback)
     # сюда вставить токен оатс билайна
-    headers = {'X-MPBX-API-AUTH-TOKEN': 'f7fd8ae5-a6e4-4f4c-9af2-e33b0de847c1'}
+    headers = {'X-MPBX-API-AUTH-TOKEN': ''}
     abonents = requests.get(url, headers=headers)
     if abonents:
         recordId = add_record_in_excel(abonents.json())
@@ -76,7 +76,7 @@ def fileLoad(idfile, firstname, phone):
 
     url = f'https://cloudpbx.beeline.ru/apis/portal/v2/records/{idfile}/download'
     # сюда вставить токен оатс билайна
-    headers = {'X-MPBX-API-AUTH-TOKEN': 'f7fd8ae5-a6e4-4f4c-9af2-e33b0de847c1'}
+    headers = {'X-MPBX-API-AUTH-TOKEN': ''}
     response = requests.get(url, headers=headers, stream=True)
     if response.status_code == 200:
         with open(f'{idfile}-{firstname}-{phone}.mp3', 'wb') as f:
