@@ -14,11 +14,9 @@ dayback = dateback.strftime("%d")
 monthback = dateback.strftime("%m")
 yearback = dateback.strftime("%Y")
 # мой токен
-# y = yadisk.YaDisk(
-#     token="y0_AgAAAAAXKtH8AADLWwAAAADflbxcPsxsEVDmRaWAo7cMqRDPjraqhi0")
-# токен ивана
+
 y = yadisk.YaDisk(
-    token="y0_AgAAAAAgMiKvAAmyQAAAAADg0LBQjLh3yPOCSB6yeoD67_llXzCb3aE")
+    token="###")
 
 
 def send_message_telegram(path):
