@@ -2,8 +2,8 @@ import requests
 
 
 def send_msg(text):
-    token = "864620487:AAHvsMKgybbFIlqOEAXFIiNdEWmdDHT_aFU"
-    chat_id = "-762891516"
+    token = ""
+    chat_id = ""
     url_req = "https://api.telegram.org/bot" + token + \
         "/sendMessage" + "?chat_id=" + chat_id + "&text=" + text
     results = requests.get(url_req)
